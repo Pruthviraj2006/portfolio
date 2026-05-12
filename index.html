@@ -2,25 +2,67 @@
 <html>
 <head>
   <title>Pruthvi Raj Portfolio</title>
+
   <style>
     body {
       margin: 0;
-      font-family: 'Arial';
-      background: linear-gradient(135deg, #0b1020, #1a1f3c);
+      font-family: Arial;
+      background: black;
       color: white;
       text-align: center;
+      overflow-x: hidden;
+    }
+
+    /* 🌌 Animated Stars */
+    body::before {
+      content: "";
+      position: fixed;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(white 1px, transparent 1px);
+      background-size: 40px 40px;
+      animation: moveStars 20s linear infinite;
+      z-index: -1;
+      opacity: 0.2;
+    }
+
+    @keyframes moveStars {
+      from { transform: translate(0, 0); }
+      to { transform: translate(-200px, -200px); }
     }
 
     h1 {
-      font-size: 40px;
+      font-size: 45px;
       color: #00e5ff;
-      text-shadow: 0 0 15px #00e5ff;
+      text-shadow: 0 0 20px #00e5ff;
       margin-top: 30px;
     }
 
-    p {
+    .xp-bar {
+      width: 60%;
+      height: 20px;
+      background: #333;
+      margin: 20px auto;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .xp-fill {
+      height: 100%;
+      width: 70%;
+      background: linear-gradient(90deg, #00e5ff, #00ff88);
+      animation: loadXP 2s ease-in-out;
+    }
+
+    @keyframes loadXP {
+      from { width: 0; }
+      to { width: 70%; }
+    }
+
+    .level {
+      margin-top: 5px;
       font-size: 18px;
-      opacity: 0.8;
+      color: #00ff88;
     }
 
     .container {
@@ -35,14 +77,14 @@
       border-radius: 15px;
       padding: 20px;
       margin: 15px;
-      width: 250px;
+      width: 260px;
       transition: 0.3s;
-      box-shadow: 0 0 10px rgba(0,229,255,0.2);
+      box-shadow: 0 0 15px rgba(0,229,255,0.2);
     }
 
     .card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 25px #00e5ff;
+      transform: scale(1.08);
+      box-shadow: 0 0 30px #00e5ff;
     }
 
     .title {
@@ -51,18 +93,37 @@
       margin-bottom: 10px;
     }
 
+    button {
+      padding: 10px 15px;
+      background: #00e5ff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background: #00ff88;
+    }
+
     .footer {
       margin-top: 40px;
-      padding: 20px;
       opacity: 0.7;
     }
+
   </style>
 </head>
 
 <body>
 
 <h1>🏐 Pruthvi Raj</h1>
-<p>Aspiring Full Stack Developer | India 🇮🇳 → Japan 🇯🇵</p>
+<p>🎮 Developer | India 🇮🇳 → Japan 🇯🇵</p>
+
+<!-- XP SYSTEM -->
+<div class="xp-bar">
+  <div class="xp-fill"></div>
+</div>
+<div class="level">Level 5 Developer 🚀</div>
 
 <div class="container">
 
@@ -70,23 +131,24 @@
     <div class="title">🚀 Projects</div>
     <p>Green Habit Tracker</p>
     <p>Volleyball Simulator</p>
+    <button onclick="alert('More coming soon!')">View</button>
   </div>
 
   <div class="card">
     <div class="title">🛠 Skills</div>
-    <p>HTML, CSS, JavaScript</p>
+    <p>HTML, CSS, JS</p>
     <p>Python</p>
   </div>
 
   <div class="card">
-    <div class="title">🎯 Goal</div>
-    <p>Work as a developer in Japan 🇯🇵</p>
+    <div class="title">🎯 Mission</div>
+    <p>Become a developer in Japan 🇯🇵</p>
   </div>
 
 </div>
 
 <div class="footer">
-  ✨ Built with passion for coding & anime ✨
+✨ Built like a game, powered by passion ✨
 </div>
 
 </body>
