@@ -56,7 +56,7 @@
     }
 
     button {
-      margin-top: 10px;
+      margin: 5px;
       padding: 8px 12px;
       border: none;
       border-radius: 8px;
@@ -66,6 +66,28 @@
 
     button:hover {
       background: #00ff88;
+    }
+
+    .skills {
+      width: 60%;
+      margin: 30px auto;
+      text-align: left;
+    }
+
+    .skill {
+      margin: 10px 0;
+    }
+
+    .bar {
+      height: 10px;
+      background: #333;
+      border-radius: 5px;
+    }
+
+    .fill {
+      height: 100%;
+      background: #00e5ff;
+      border-radius: 5px;
     }
 
   </style>
@@ -82,7 +104,7 @@
     <img src="habit.png">
     <div class="content">
       <div class="title">🎮 Habit Tracker</div>
-      <p>Gamified habit tracker with XP & streak system.</p>
+      <p>Gamified tracker with XP, streaks, avatar system.</p>
       <button onclick="window.open('https://github.com/Pruthviraj2006')">GitHub</button>
     </div>
   </div>
@@ -91,10 +113,28 @@
     <img src="volleyball.png">
     <div class="content">
       <div class="title">🏐 Volleyball Simulator</div>
-      <p>Anime-style volleyball game UI & logic.</p>
+      <p>Anime-style volleyball game UI & gameplay logic.</p>
       <button onclick="window.open('https://github.com/Pruthviraj2006')">GitHub</button>
     </div>
   </div>
+
+</div>
+
+<!-- SKILLS -->
+<div class="skills">
+  <h2>🛠 Skills</h2>
+
+  <div class="skill">HTML</div>
+  <div class="bar"><div class="fill" style="width:90%"></div></div>
+
+  <div class="skill">CSS</div>
+  <div class="bar"><div class="fill" style="width:85%"></div></div>
+
+  <div class="skill">JavaScript</div>
+  <div class="bar"><div class="fill" style="width:80%"></div></div>
+
+  <div class="skill">Python</div>
+  <div class="bar"><div class="fill" style="width:75%"></div></div>
 
 </div>
 
