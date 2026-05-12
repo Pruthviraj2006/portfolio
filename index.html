@@ -7,62 +7,15 @@
     body {
       margin: 0;
       font-family: Arial;
-      background: black;
+      background: #0b1020;
       color: white;
       text-align: center;
-      overflow-x: hidden;
-    }
-
-    /* 🌌 Animated Stars */
-    body::before {
-      content: "";
-      position: fixed;
-      width: 200%;
-      height: 200%;
-      background: radial-gradient(white 1px, transparent 1px);
-      background-size: 40px 40px;
-      animation: moveStars 20s linear infinite;
-      z-index: -1;
-      opacity: 0.2;
-    }
-
-    @keyframes moveStars {
-      from { transform: translate(0, 0); }
-      to { transform: translate(-200px, -200px); }
     }
 
     h1 {
-      font-size: 45px;
       color: #00e5ff;
       text-shadow: 0 0 20px #00e5ff;
       margin-top: 30px;
-    }
-
-    .xp-bar {
-      width: 60%;
-      height: 20px;
-      background: #333;
-      margin: 20px auto;
-      border-radius: 10px;
-      overflow: hidden;
-    }
-
-    .xp-fill {
-      height: 100%;
-      width: 70%;
-      background: linear-gradient(90deg, #00e5ff, #00ff88);
-      animation: loadXP 2s ease-in-out;
-    }
-
-    @keyframes loadXP {
-      from { width: 0; }
-      to { width: 70%; }
-    }
-
-    .level {
-      margin-top: 5px;
-      font-size: 18px;
-      color: #00ff88;
     }
 
     .container {
@@ -73,42 +26,36 @@
     }
 
     .card {
-      background: rgba(255,255,255,0.05);
+      background: #1a1f3c;
       border-radius: 15px;
       padding: 20px;
       margin: 15px;
-      width: 260px;
+      width: 300px;
       transition: 0.3s;
-      box-shadow: 0 0 15px rgba(0,229,255,0.2);
     }
 
     .card:hover {
-      transform: scale(1.08);
-      box-shadow: 0 0 30px #00e5ff;
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #00e5ff;
     }
 
     .title {
-      font-size: 22px;
+      font-size: 20px;
       color: #00e5ff;
       margin-bottom: 10px;
     }
 
     button {
-      padding: 10px 15px;
-      background: #00e5ff;
+      margin-top: 10px;
+      padding: 8px 12px;
       border: none;
       border-radius: 8px;
+      background: #00e5ff;
       cursor: pointer;
-      margin-top: 10px;
     }
 
     button:hover {
       background: #00ff88;
-    }
-
-    .footer {
-      margin-top: 40px;
-      opacity: 0.7;
     }
 
   </style>
@@ -117,38 +64,28 @@
 <body>
 
 <h1>🏐 Pruthvi Raj</h1>
-<p>🎮 Developer | India 🇮🇳 → Japan 🇯🇵</p>
-
-<!-- XP SYSTEM -->
-<div class="xp-bar">
-  <div class="xp-fill"></div>
-</div>
-<div class="level">Level 5 Developer 🚀</div>
+<p>Aspiring Developer | India 🇮🇳 → Japan 🇯🇵</p>
 
 <div class="container">
 
   <div class="card">
-    <div class="title">🚀 Projects</div>
-    <p>Green Habit Tracker</p>
-    <p>Volleyball Simulator</p>
-    <button onclick="alert('More coming soon!')">View</button>
+    <div class="title">🎮 Green Habit Tracker</div>
+    <p>Gamified habit tracker with XP, streaks and avatar system.</p>
+    <button onclick="window.open('https://github.com/Pruthviraj2006')">GitHub</button>
+  </div>
+
+  <div class="card">
+    <div class="title">🏐 Volleyball Simulator</div>
+    <p>Anime-inspired volleyball game with UI and gameplay logic.</p>
+    <button onclick="window.open('https://github.com/Pruthviraj2006')">GitHub</button>
   </div>
 
   <div class="card">
     <div class="title">🛠 Skills</div>
-    <p>HTML, CSS, JS</p>
+    <p>HTML, CSS, JavaScript</p>
     <p>Python</p>
   </div>
 
-  <div class="card">
-    <div class="title">🎯 Mission</div>
-    <p>Become a developer in Japan 🇯🇵</p>
-  </div>
-
-</div>
-
-<div class="footer">
-✨ Built like a game, powered by passion ✨
 </div>
 
 </body>
