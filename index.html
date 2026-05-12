@@ -28,15 +28,25 @@
     .card {
       background: #1a1f3c;
       border-radius: 15px;
-      padding: 20px;
       margin: 15px;
       width: 300px;
+      overflow: hidden;
       transition: 0.3s;
     }
 
     .card:hover {
       transform: scale(1.05);
-      box-shadow: 0 0 20px #00e5ff;
+      box-shadow: 0 0 25px #00e5ff;
+    }
+
+    img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .content {
+      padding: 15px;
     }
 
     .title {
@@ -64,26 +74,26 @@
 <body>
 
 <h1>🏐 Pruthvi Raj</h1>
-<p>Aspiring Developer | India 🇮🇳 → Japan 🇯🇵</p>
+<p>Developer | India 🇮🇳 → Japan 🇯🇵</p>
 
 <div class="container">
 
   <div class="card">
-    <div class="title">🎮 Green Habit Tracker</div>
-    <p>Gamified habit tracker with XP, streaks and avatar system.</p>
-    <button onclick="window.open('https://github.com/Pruthviraj2006')">GitHub</button>
+    <img src="habit.png">
+    <div class="content">
+      <div class="title">🎮 Habit Tracker</div>
+      <p>Gamified habit tracker with XP & streak system.</p>
+      <button onclick="window.open('https://github.com/Pruthviraj2006')">GitHub</button>
+    </div>
   </div>
 
   <div class="card">
-    <div class="title">🏐 Volleyball Simulator</div>
-    <p>Anime-inspired volleyball game with UI and gameplay logic.</p>
-    <button onclick="window.open('https://github.com/Pruthviraj2006')">GitHub</button>
-  </div>
-
-  <div class="card">
-    <div class="title">🛠 Skills</div>
-    <p>HTML, CSS, JavaScript</p>
-    <p>Python</p>
+    <img src="volleyball.png">
+    <div class="content">
+      <div class="title">🏐 Volleyball Simulator</div>
+      <p>Anime-style volleyball game UI & logic.</p>
+      <button onclick="window.open('https://github.com/Pruthviraj2006')">GitHub</button>
+    </div>
   </div>
 
 </div>
