@@ -1,69 +1,68 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Pruthvi Raj  Portfolio</title>
+  <title>Pruthvi Raj Portfolio</title>
 
   <style>
     body {
       margin: 0;
       font-family: Arial;
-      background: radial-gradient(circle, #0b1020, #000);
+      background: black;
       color: white;
       text-align: center;
       overflow-x: hidden;
     }
 
-    /* 🌌 HUD TOP BAR */
-    .topbar {
+    /* 🌌 Animated Stars */
+    body::before {
+      content: "";
       position: fixed;
-      top: 0;
-      width: 100%;
-      background: #0b1020;
-      padding: 10px;
-      display: flex;
-      justify-content: space-around;
-      border-bottom: 1px solid #00e5ff;
-      z-index: 10;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(white 1px, transparent 1px);
+      background-size: 40px 40px;
+      animation: moveStars 20s linear infinite;
+      z-index: -1;
+      opacity: 0.2;
+    }
+
+    @keyframes moveStars {
+      from { transform: translate(0, 0); }
+      to { transform: translate(-200px, -200px); }
     }
 
     h1 {
-      margin-top: 80px;
+      font-size: 45px;
       color: #00e5ff;
-      text-shadow: 0 0 25px #00e5ff;
-    }
-
-    /* XP BAR */
-    .xp-wrapper {
-      width: 60%;
-      margin: 20px auto;
-      background: #222;
-      border-radius: 20px;
-      overflow: hidden;
+      text-shadow: 0 0 20px #00e5ff;
+      margin-top: 30px;
     }
 
     .xp-bar {
+      width: 60%;
       height: 20px;
-      width: 0%;
+      background: #333;
+      margin: 20px auto;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .xp-fill {
+      height: 100%;
+      width: 70%;
       background: linear-gradient(90deg, #00e5ff, #00ff88);
-      transition: 0.4s;
+      animation: loadXP 2s ease-in-out;
+    }
+
+    @keyframes loadXP {
+      from { width: 0; }
+      to { width: 70%; }
     }
 
     .level {
+      margin-top: 5px;
+      font-size: 18px;
       color: #00ff88;
-      margin-bottom: 10px;
-    }
-
-    button {
-      padding: 10px 15px;
-      background: #00e5ff;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      margin: 10px;
-    }
-
-    button:hover {
-      background: #00ff88;
     }
 
     .container {
@@ -75,13 +74,12 @@
 
     .card {
       background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(0,229,255,0.2);
-      margin: 15px;
-      padding: 15px;
       border-radius: 15px;
+      padding: 20px;
+      margin: 15px;
       width: 260px;
       transition: 0.3s;
-      backdrop-filter: blur(10px);
+      box-shadow: 0 0 15px rgba(0,229,255,0.2);
     }
 
     .card:hover {
@@ -89,97 +87,69 @@
       box-shadow: 0 0 30px #00e5ff;
     }
 
+    .title {
+      font-size: 22px;
+      color: #00e5ff;
+      margin-bottom: 10px;
+    }
+
+    button {
+      padding: 10px 15px;
+      background: #00e5ff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background: #00ff88;
+    }
+
+    .footer {
+      margin-top: 40px;
+      opacity: 0.7;
+    }
+
   </style>
 </head>
 
 <body>
 
-<!-- 🌌 TOP HUD -->
-<div class="topbar">
-  <div>👨‍💻 Pruthvi Raj</div>
-  <div id="level">Level 1</div>
-  <div>⚡ XP System</div>
-</div>
-
-<h1>🏐 FINAL BOSS MODE</h1>
-<p>Developer Dashboard | India 🇮🇳 → Japan 🇯🇵</p>
+<h1>🏐 Pruthvi Raj</h1>
+<p>🎮 Developer | India 🇮🇳 → Japan 🇯🇵</p>
 
 <!-- XP SYSTEM -->
-<div class="level" id="levelText">Level 1</div>
-
-<div class="xp-wrapper">
-  <div class="xp-bar" id="xp"></div>
+<div class="xp-bar">
+  <div class="xp-fill"></div>
 </div>
+<div class="level">Level 5 Developer 🚀</div>
 
-<button onclick="gainXP()">⚡ Gain XP</button>
-
-<!-- DASHBOARD -->
 <div class="container">
 
   <div class="card">
-    <h3>💻 Developer Profile</h3>
-    <p>Full Stack Developer</p>
-    <p>Frontend • Game UI • Systems</p>
+    <div class="title">🚀 Projects</div>
+    <p>Green Habit Tracker</p>
+    <p>Volleyball Simulator</p>
+    <button onclick="alert('More coming soon!')">View</button>
   </div>
 
   <div class="card">
-    <h3>🎮 Projects</h3>
-    <p>✔ Habit Tracker</p>
-    <p>✔ Volleyball Simulator</p>
+    <div class="title">🛠 Skills</div>
+    <p>HTML, CSS, JS</p>
+    <p>Python</p>
   </div>
 
   <div class="card">
-    <h3>🎯 Mission</h3>
-    <p>Build world-class apps</p>
-    <p>Target: Japan 🇯🇵</p>
-  </div>
-
-  <div class="card">
-    <h3>🏆 Achievements</h3>
-    <p>✔ HENNGE Challenge Completed</p>
-    <p>✔ Portfolio Game Built</p>
+    <div class="title">🎯 Mission</div>
+    <p>Become a developer in Japan 🇯🇵</p>
   </div>
 
 </div>
 
-<script>
-let xp = localStorage.getItem("xp") ? parseInt(localStorage.getItem("xp")) : 0;
-let level = localStorage.getItem("level") ? parseInt(localStorage.getItem("level")) : 1;
-
-function updateUI() {
-  document.getElementById("xp").style.width = (xp % 100) + "%";
-  document.getElementById("level").innerText = "Level " + level;
-  document.getElementById("levelText").innerText = "Level " + level;
-  localStorage.setItem("xp", xp);
-  localStorage.setItem("level", level);
-}
-
-function playSound(type) {
-  let audio = new Audio(
-    type === "levelup"
-      ? "https://www.soundjay.com/buttons/sounds/button-10.mp3"
-      : "https://www.soundjay.com/buttons/sounds/button-09.mp3"
-  );
-  audio.play();
-}
-
-function gainXP() {
-  xp += Math.floor(Math.random() * 25) + 10;
-
-  if (xp >= 100) {
-    xp = 0;
-    level++;
-    playSound("levelup");
-    alert("🔥 LEVEL UP → Level " + level);
-  } else {
-    playSound("xp");
-  }
-
-  updateUI();
-}
-
-updateUI();
-</script>
+<div class="footer">
+✨ Built like a game, powered by passion ✨
+</div>
 
 </body>
 </html>
